@@ -26,7 +26,7 @@ def _voice_info(string):
 @listify.listify
 @public.add
 def voices(lang=None):
-    """return list of installed voices (name, lang, description)"""
+    """return a list of installed voices (name, lang, description)"""
     cmd = ["/usr/bin/say", "-v", "?"]
     out = runcmd.run(cmd).out
     for l in out.splitlines():
